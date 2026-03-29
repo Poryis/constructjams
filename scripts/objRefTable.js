@@ -28,8 +28,7 @@ self.C3_JsPropNameTable = [
 	{Ti: 0},
 	{HDo: 0},
 	{Fa: 0},
-	{Do: 0},
-	{Sprite: 0}
+	{Do: 0}
 ];
 
 self.InstanceType = {
@@ -45,6 +44,5 @@ self.InstanceType = {
 	Ti: class extends self.ISpriteInstance {},
 	HDo: class extends self.ISpriteInstance {},
 	Fa: class extends self.ISpriteInstance {},
-	Do: class extends self.ISpriteInstance {},
-	Sprite: class extends self.ISpriteInstance {}
+	Do: class extends self.ISpriteInstance {}
 }

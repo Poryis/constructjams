@@ -39,7 +39,6 @@ Fullscreen
   tabindex="0">
 </iframe>
 
-<!-- SCRIPT -->
 <script>
 function goFullscreen() {
   let elem = document.documentElement;
@@ -48,15 +47,25 @@ function goFullscreen() {
   }
 }
 
-// keep keyboard focus on game
-window.onload = function() {
+function focusGame() {
   const game = document.getElementById("gameFrame");
   game.focus();
+}
 
-  document.body.addEventListener("click", function() {
-    game.focus();
-  });
+// initial focus
+window.onload = function() {
+  focusGame();
 };
+
+// ANY click anywhere → refocus game
+document.addEventListener("click", function() {
+  setTimeout(focusGame, 50);
+});
+
+// ALSO catch key presses just in case
+document.addEventListener("keydown", function() {
+  focusGame();
+});
 </script>
 
 </body>
